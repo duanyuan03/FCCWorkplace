@@ -239,9 +239,9 @@ class RDFanalysis():
         df = df.Define('jet2_nconst', 'jet_nconst[1]')
 
         # ── Calculate Jet Charge ───────────────────────────────────────────────
-        df = df.Define("jet_charges", "JetConstituentsUtils::get_charge({})".format(jetClusteringHelper.constituents))
-        df = df.Define("jet1_charge", "jet_charges[0]")
-        df = df.Define("jet2_charge", "jet_charges[1]")
+        # df = df.Define("jet_charges", "JetConstituentsUtils::get_charge({})".format(jetClusteringHelper.constituents))
+        # df = df.Define("jet1_charge", "jet_charges[0]")
+        # df = df.Define("jet2_charge", "jet_charges[1]")
 
         # ── Z resonance from muon pair ──────────────────────────────────────────
         df = df.Define("zbuilder_result", "HiggsTools::resonanceBuilder_mass_recoil(91.2, 125, 0.4, 240, false)(leps, MCRecoAssociations0, MCRecoAssociations1, ReconstructedParticles, Particle, Particle0, Particle1)")
