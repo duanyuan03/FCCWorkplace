@@ -1,0 +1,16 @@
+# collections_config.yaml
+# -----------------------
+# Candidate SimTrackerHit collections, in priority order. The converter picks the
+# first one present in the file unless overridden with --collection.
+# Primary target: the vertex barrel (its outer 2 layers = VTXOB = the 20 um MAPS).
+
+input:
+  simhit_collections:
+    - VertexBarrelCollection   # ALLEGRO/BNL_MAPS vertex barrel (VTXOB = layers 3,4)
+    - SiWrBCollection          # legacy: ALLEGRO silicon wrapper barrel
+    - SiWrDCollection
+    - MAPSWrapperBarrelHits
+    - SimTrackerHits
+
+output:
+  pixesl_csv: outputs/pixesl_hits_zinclusive.csv
